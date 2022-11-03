@@ -14,4 +14,13 @@ class Post{
   factory Post.fromJson(Map<String,dynamic> json){
     return Post(id: json['id'], userId: json['userId'], title: json['title'], body: json['body']);
   }
+
+  Map<String, dynamic> toMap(){
+    return {
+      'id':id,
+      'userId': userId,
+      'title':title,
+      'body':body,
+    };
+  }
 }
